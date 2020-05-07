@@ -109,6 +109,84 @@
 					</ul>
 				</section>
 
+				<section>
+					<h1>Self Testing</h1>
+				</section>
+
+				<section>
+					<h2>js-assessment</h2>
+					<ul>
+						<li class="fragment">Given a set of broken unit tests</li>
+						<li class="fragment">You then fix the code to make the tests pass</li>
+						<li class="fragment"><a href="https://github.com/rmurphey/js-assessment" target="_new">https://github.com/rmurphey/js-assessment</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/ja1.png">
+				</section>
+
+				<section>
+					<pre ><code class="language-javascript">
+exports = typeof window === 'undefined' ? global : window;
+
+exports.arraysAnswers = {
+  indexOf: function(arr, item) {
+
+  },
+  sum: function(arr) {
+
+  },
+  remove: function(arr, item) {
+
+  },
+					</code></pre>
+				</section>
+
+				<section>
+					<pre ><code class="language-javascript">
+indexOf: function(arr, item) {
+	let found = -1;
+	arr.forEach((i,idx) => {
+		if(i === item) found = idx;
+	});
+	return found;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<img src="img/ja2.jpg">
+				</section>
+
+				<section>
+					<h2>Also Consider...</h2>
+					<p>
+					<a href="https://rmurphey.com/blog/2016/02/13/exercises-for-js-beginners" target="_top">Exercises for JS Beginners</a><br/>
+					<a href="https://codepen.io/rmurphey/pen/bEzoOZ" target="_new">Number Guessing Game</a>
+					</p>
+				</section>
+
+				<section>
+					<h2>node-school</h2>
+					<ul>
+					<li class="fragment">For Web skills, not *just* Node</li>
+					<li class="fragment">In person and automated utilities ("workshoppers")</li>
+					<li class="fragment">javascript, node, git, npm, node streams, electron, markdown and html</li>
+					<li class="fragment"><a href="https://nodeschool.io/#workshopper-list" target="_new">List</a></li>
+					</ul>
+				</section>
+
+				<section>
+				<pre><code class="language-bash">
+				npm i -g javascripting
+				</code></pre>
+				</section>
+
+				<section>
+					<h2>Demo</h2>
+				</section>
+
 				<section data-background="img/cat_qa.png" data-background-opacity="0.4">
 					<h1>Questions</h1>
 					<p>reach me at @raymondcamden</p>
