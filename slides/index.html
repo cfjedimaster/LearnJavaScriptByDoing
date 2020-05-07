@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Learn JavaScript By Doing JavaScript</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<style>
+		.twocol {
+			display: grid;
+			grid-template-columns: 58% 42%;
+		}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background2="img/books.jpg" data-background-opacity2="0.3">
+					<h1>Learn JavaScript by Doing JavaScript</h1>
+				</section>
+
+				<section>
+					<h2>read.me</h2>
+					<div class="twocol">
+					<ul>
+						<li>Raymond Camden</li>
+						<li>Developer Evangelist @ HERE (maps, routing, etc!)</li>
+						<li>Enterprise Cat Demo Builder</li>
+						<li>Second best "Just Dance 2019" player (in my house)</li>
+						<li>www.raymondcamden.com</li>
+						<li>@raymondcamden</li>
+					</ul>
+					<div>
+						<img src="img/ray.png" style="float:right">
+					</div>
+					</div>
+				</section>
+
+				<section >
+					<h1>Good News!</h1>
+				</section>
+
+				<section>
+					<h2>You know JavaScript!</h2>
+					<img src="img/confidence.jpg">
+				</section>
+
+				<section>
+					<img src="img/skills.png">
+				</section>
+
+				<section>
+					<h1>What Next?</h1>
+				</section>
+
+				<section>
+					<h2>Write Code</h2>
+					<h2 class="fragment">Write More Code</h2>
+					<h2 class="fragment">Write Even More Code</h2>
+				</section>
+
+				<section>
+					<h1>Cool</h1>
+					<h2>what code?</h2>
+				</section>
+
+				<section>
+				<h1>First Suggestion</h1>
+				<h2><strike>Don't</strike> Repeat Yourself</h2>
+				</section>
+
+				<section>
+				<h1>First Suggestion</h1>
+				<h2>Build What's Been Built</h2>
+				</section>
+
+				<section>
+					<h1>Second Suggestion</h1>
+				</section>
+
+				<section data-background="img/maisie.jpg" data-background-opacity="0.3" data-background-size="70%">
+					<h2>PLAY</h2>
+				</section>
+
+				<section>
+					<h2>Options</h2>
+					<ul>
+					<li class="fragment">Self Testing</li>
+					<li class="fragment">Games</li>
+					<li class="fragment">Random Utilities</li>
+					</ul>
+				</section>
+
+				<section data-background="img/cat_qa.png" data-background-opacity="0.4">
+					<h1>Questions</h1>
+					<p>reach me at @raymondcamden</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+			Reveal.configure({ slideNumber: 'c/t' });
+		</script>
+	</body>
+</html>
