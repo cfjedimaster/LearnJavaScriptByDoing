@@ -128,8 +128,6 @@
 
 				<section>
 					<pre ><code class="language-javascript">
-exports = typeof window === 'undefined' ? global : window;
-
 exports.arraysAnswers = {
   indexOf: function(arr, item) {
 
@@ -172,13 +170,13 @@ indexOf: function(arr, item) {
 					<ul>
 					<li class="fragment">For Web skills, not *just* Node</li>
 					<li class="fragment">In person and automated utilities ("workshoppers")</li>
-					<li class="fragment">javascript, node, git, npm, node streams, electron, markdown and html</li>
+					<li class="fragment">main courses: javascript, node, git, npm, node streams, electron, markdown and html</li>
 					<li class="fragment"><a href="https://nodeschool.io/#workshopper-list" target="_new">List</a></li>
 					</ul>
 				</section>
 
 				<section>
-				<pre><code class="language-bash">
+				<pre><code class="language-bash" data-trim>
 				npm i -g javascripting
 				</code></pre>
 				</section>
@@ -186,6 +184,352 @@ indexOf: function(arr, item) {
 				<section>
 					<h2>Demo</h2>
 				</section>
+
+				<section>
+				<h2>Advent of Code</h2>
+				<ul>
+				<li class="fragment">Christmas-timed event</li>
+				<li class="fragment">Five years of previous events</li>
+				<li class="fragment">25 days of 2 challenges each</li>
+				<li class="fragment">Not JavaScript-specific</li>
+				<li class="fragment"><a href="https://adventofcode.com/" target="_new">https://adventofcode.com/</a></li>
+				</ul>
+				</section>
+
+				<section>
+					<img src="img/advent.jpg">
+				</section>
+
+				<section>
+				<pre><code class="language-javascript" data-trim>
+var input = '()((((  LOTS OF TEXT REMOVED ()(';
+
+var floor = 0;
+
+for(var i=0;i&lt;input.length;i++) {
+    var char = input.charAt(i);
+    if(char === '(') floor++;
+    if(char === ')') floor--;
+}
+
+console.log("Done - "+floor);
+				</code></pre>				
+				</section>
+				
+				<section>
+					<h1>Easy!</h1>
+				</section>
+
+				<section>
+<blockquote>
+Santa has provided you a list of the weights of every package he needs to fit on the sleigh. 
+The packages need to be split into three groups of exactly the same weight, and every package has to fit. 
+</blockquote>
+				</section>
+
+				<section>
+<blockquote>
+The first group - the one going in the passenger compartment - needs as few packages as possible so that Santa 
+has some legroom left over.
+</blockquote>
+				</section>
+
+				<section>
+<blockquote>
+If there are multiple ways to arrange the packages such that the fewest possible are in the first group, 
+choose the way where the first group has the smallest quantum entanglement. The quantum entanglement of a group
+ of packages is the product of their weights - 
+the value you get when you multiply their weights together. 
+</blockquote>
+				</section>
+
+				<section>
+					<h2>Devtools Challenger</h2>
+					<ul>
+						<li class="fragment"><a href="http://rachelnabors.com/" target="_new">Rachel Nabors</a></li>
+						<li class="fragment">CSS Animation challenge</li>
+						<li class="fragment">Firefox Devtools</li>
+						<li class="fragment">A bit old!</li>
+						<li class="fragment"><a href="http://devtoolschallenger.com/" target="_new">http://devtoolschallenger.com/</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/dtc.jpg">
+				</section>
+
+				<section>
+					<h1>Games</h1>
+				</section>
+
+				<section>
+					<h2>Old School</h2>
+					<div class="twocol">
+					<ul>
+						<li>Omega</li>
+						<li>1989</li>
+						<li>Apple II, C64, MS-DOS, Atari, and even the Mac!</li>
+						<li>Choose tank equipment and write the AI</li>
+						<li>272 page manual</li>
+					</ul>
+					<div>
+						<img src="img/omega.jpg" style="float:right;">
+					</div>
+					</div>
+				</section>
+
+				<section>
+					<pre><code>
+Start
+	Do Seek
+	Do Destroy
+	Branch to Start
+
+	Include Seek
+	Include Destroy
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code>
+CheckAll
+	If Tank Treads arc Functional Then Branch to OK
+	If Scanner is Functional Then Branch to OK
+	If Weapon is Functional Then Branch to OK
+	If Fuel is Remaining Then Branch to OK
+	If Repair Kit is Available Then Branch to OK
+	Self Destruct
+
+OK
+	Resume
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Old School</h2>
+					<div class="twocol">
+					<ul>
+						<li>RobotWar</li>
+						<li>1981</li>
+						<li>PLATO, Apple II</li>
+						<li>Robots and war, what else do you need?</li>
+					</ul>
+					<div>
+						<img src="img/rw.png" style="float:right;">
+					</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>JavaScript Warrior</h2>
+					<ul>
+					<li class="fragment">Write one function to control a warrior</li>
+					<li class="fragment">Gives you basic built in stuff like <code>check</code> and <code>attack</code></li>
+					<li class="fragment">Also a bit old</li>
+					<li class="fragment"><a href="http://jswarrior.fusioncharts.com/" target="_new">http://jswarrior.fusioncharts.com/</a></li>
+					</ul>
+				</section>
+
+				<section>
+				<pre><code data-class="language-javascript">
+jsWarrior.turn = function(warrior) {
+  if(warrior.check() == "enemy") {
+    warrior.attack();
+  }
+  else {
+    warrior.walk()
+  }
+}
+				</code></pre>
+				</section>
+
+				<section>
+					<img src="img/js1.png">
+				</section>
+
+				<section>
+				<pre><code data-class="language-javascript">
+jsWarrior.turn = function(warrior) {
+  if(warrior.check() == "enemy") {
+    if(warrior.getHealth() &gt; 6) {
+	    warrior.attack();
+    } else warrior.rest();
+  }
+  else {
+    warrior.walk()
+  }
+}
+				</code></pre>
+				</section>
+
+				<section>
+				<pre><code data-class="language-javascript">
+jsWarrior.turn = function(warrior) {
+  if(warrior.check() == "enemy") {
+	    warrior.attack();
+  }
+  else {
+    if(warrior.getHealth() &gt; 14) {
+	    warrior.walk();
+     } else warrior.rest();
+  }
+}
+				</code></pre>
+				</section>
+				
+
+				<section>
+					<h2>WarriorJS</h2>
+					<ul>
+					<li class="fragment">Write one function to control a warrior</li>
+					<li class="fragment">Gives you basic built in stuff like <code>walk</code> and <code>think</code></li>
+					<li class="fragment">Maybe abandoned?</li>
+					<li class="fragment"><a href="https://warriorjs.com/" target="_new">https://warriorjs.com/</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/ws1.png">
+				</section>
+
+				<section>
+					<h2>Untrusted</h2>
+					<ul>
+					<li class="fragment">AKA The Continuing Adventures of Dr. Eval</li>
+					<li class="fragment">Break out of a series of cells</li>
+					<li class="fragment">Plays music</li>
+					<li class="fragment"><a href="https://alexnisnevich.github.io/untrusted/" target="_new">https://alexnisnevich.github.io/untrusted/</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/eval1.png">
+				</section>
+
+				<section>
+				<blockquote style="text-align: left";>
+				<p>
+I've given you as much access to their code as I could, but
+it's not perfect. The red background indicates lines that
+are off-limits from editing.
+				</p>
+				<p>
+The code currently places blocks in a rectangle surrounding
+you. All you need to do is make a gap. You don't even need
+to do anything extra. In fact, you should be doing less.
+				</p>
+				</blockquote>
+				</section>
+
+				<section>
+				<pre><code class="language-javascript" data-line-numbers data-trim>
+for (y = 3; y &lt;= map.getHeight() - 10; y++) {
+	map.placeObject(5, y, 'block');
+	map.placeObject(map.getWidth() - 5, y, 'block');
+}
+
+for (x = 5; x &gt;= map.getWidth() - 5; x++) {
+	map.placeObject(x, 3, 'block');
+	map.placeObject(x, map.getHeight() - 10, 'block');
+}
+				</code></pre>
+				</section>
+
+				<section>
+				<pre><code class="language-javascript" data-line-numbers="2,3" data-trim>
+for (y = 3; y &lt;= map.getHeight() - 10; y++) {
+	//map.placeObject(5, y, 'block');
+	//map.placeObject(map.getWidth() - 5, y, 'block');
+}
+
+for (x = 5; x &gt;= map.getWidth() - 5; x++) {
+	map.placeObject(x, 3, 'block');
+	map.placeObject(x, map.getHeight() - 10, 'block');
+}
+				</code></pre>
+				</section>
+
+				<section>
+					<img src="img/eval2.png">
+				</section>
+
+				<section>
+					<img src="img/eval3.png">
+				</section>
+
+				<section>
+					<h2>RxJS-fruits</h2>
+					<ul>
+					<li class="fragment">Teaches RxJS and Observables</li>
+					<li class="fragment">Making fruit drinks!</li>
+					<li class="fragment"><a href="https://www.rxjs-fruits.com/subscribe" target="_new">https://www.rxjs-fruits.com/subscribe</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/rx1.png">
+				</section>
+
+				<section>
+					<img src="img/rx2.png">
+				</section>
+
+				<section>
+					<h2>Code Combat</h2>
+					<ul>
+					<li class="fragment">Python, JavaScript, and HTML</li>
+					<li class="fragment">Free + Commercial</li>
+					<li class="fragment">Very good support for educators</li>
+					<li class="fragment"><a href="https://codecombat.com/" target="_new">https://codecombat.com/</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/cc1.png">
+				</section>
+
+				<section>
+					<img src="img/cc2.png">
+				</section>
+
+				<section>
+					<img src="img/cc3.png">
+				</section>
+
+				<section>
+					<h2>Build Your Own!</h2>
+					<ul>
+						<li class="fragment">Plenty of frameworks</li>
+						<li class="fragment">Build old games</li>
+						<li class="fragment">No need for high end graphics</li>
+						<li class="fragment"><a href="https://www.decisionproblem.com/paperclips/index2.html">Paperclips</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Random Utilities</h1>
+				</section>
+
+				<section>
+				<h2>codepen.io</h2>
+				<img src="img/codepen.png">
+				</section>
+
+				<section>
+				<h2>codesandbox.io</h2>
+				<img src="img/csand.png">
+				</section>
+
+				<section>
+				<h2>runjs.dev</h2>
+				<img src="img/runjs.png">
+				</section>
+
+				<section>
+				<h2>da console!</h2>
+				<img src="img/down.png">
+				</section>
+
 
 				<section data-background="img/cat_qa.png" data-background-opacity="0.4">
 					<h1>Questions</h1>
